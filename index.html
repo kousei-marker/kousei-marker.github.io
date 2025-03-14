@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>山田太郎のポートフォリオサイト</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <h1>山田太郎</h1>
-    <p>UI/UXデザイナー見習いです！ドットインストールで勉強中です！</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>将棋アプリ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>将棋アプリ</h1>
+
+  <div id="game-container">
+
+    <!-- 後手の持ち駒エリア -->
+    <div class="useArea" id="playerB-captured"></div>
+
+    <div id="shogi-board">
+      <table>
+        <tbody>
+          <!-- 敵陣 -->
+          <tr>
+            <td class="enemy" alt="kyoB">香</td>
+            <td class="enemy" alt="keiB">桂</td>
+            <td class="enemy" alt="ginB">銀</td>
+            <td class="enemy" alt="kinB">金</td>
+            <td class="enemy" alt="gyokuB">王</td>
+            <td class="enemy" alt="kinB">金</td>
+            <td class="enemy" alt="ginB">銀</td>
+            <td class="enemy" alt="keiB">桂</td>
+            <td class="enemy" alt="kyoB">香</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="enemy" alt="hisyaB">飛</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="enemy" alt="kakuB">角</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+            <td class="enemy" alt="fuB">歩</td>
+          </tr>
+          <!-- 中央 -->
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- 自陣 -->
+          <tr>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+            <td class="friendly" alt="fuA">歩</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="friendly" alt="kakuA">角</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="friendly" alt="hisyaA">飛</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="friendly" alt="kyoA">香</td>
+            <td class="friendly" alt="keiA">桂</td>
+            <td class="friendly" alt="ginA">銀</td>
+            <td class="friendly" alt="kinA">金</td>
+            <td class="friendly" alt="gyokuA">玉</td>
+            <td class="friendly" alt="kinA">金</td>
+            <td class="friendly" alt="ginA">銀</td>
+            <td class="friendly" alt="keiA">桂</td>
+            <td class="friendly" alt="kyoA">香</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 先手の持ち駒エリア -->
+    <div class="useArea" id="playerA-captured"></div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
 </html>
