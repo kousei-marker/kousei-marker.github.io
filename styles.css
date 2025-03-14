@@ -1,5 +1,85 @@
-h1{
-  font-size: 24px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ddd;
+body {
+  font-family: "Noto Serif JP", serif; /* 将棋駒に適した日本語フォント */
+  background-color: #f5deb3;
+  text-align: center;
+  padding: 20px;
 }
+
+#shogi-board table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 450px;
+  height: 450px;
+  background-color: #f0e1c9;
+  border: 3px solid #8b4513;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#shogi-board td {
+  border: 1px solid #8b4513;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.piece {
+  font-weight: bold;
+}
+
+
+
+.enemy {
+  transform: rotate(180deg); /* 敵駒を反転 */
+}
+
+/* 選択された駒の背景色を変更 */
+.friendly.selected {
+  background-color: lightblue;
+  border-radius: 50%; /* 駒の見た目に合わせるため */
+}
+
+/* 駒選択時のスタイル */
+.selected {
+  background-color:orange;
+}
+
+/* 移動可能地点のスタイル */
+.option {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playerB-captured {
+  display: flex;
+  margin-bottom: 250px;
+  margin-top: 50px;
+  margin-right: 30px;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: #d38a04b8;
+}
+
+#playerA-captured {
+  display: flex;
+  margin-top: 250px;
+  margin-left: 30px;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: #d38a04b8;
+}
+
+
+
+
